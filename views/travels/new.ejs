@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate.ejs') -%>
+
+<h1 class="page-title">新規投稿</h1>
+<form action="/travels" method="post">
+    <div class="form-item">
+        <label for="title">旅行タイトル</label><br>
+        <input type="text" name="travel[title]" id="title" placeholder="東京旅行">
+    </div>
+    <div class="form-item">
+        <label for="location">行き先</label><br>
+        <input type="text" name="travel[location]" id="location" placeholder="東京都東京市">
+    </div>
+    <button>投稿する</button>
+</form>
+<div>
+    <a href="/travels">戻る</a>
+</div>

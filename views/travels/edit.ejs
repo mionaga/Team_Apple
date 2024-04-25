@@ -1,0 +1,22 @@
+<% layout('layouts/boilerplate.ejs') -%>
+
+<h1 class="page-title">ブログの編集</h1>
+
+<main>
+    <div class="container">
+        <form action="/travels/<%= travel._id %>?_method=PUT" method="post" >
+            <div class="form-item">
+                <label for="title">旅行タイトル</label><br>
+                <input type="text" name="travel[title]" id="title" placeholder="東京旅行" value="<%= travel.title %>">
+            </div>
+            <div class="form-item">
+                <label for="location">行き先</label><br>
+                <input type="text" name="travel[location]" id="location" placeholder="東京都東京市" value="<%= travel.location %>">
+            </div>
+            <button>更新する</button>
+        </form>
+        <div>
+            <a href="/travels">一覧に戻る</a>
+        </div>
+    </div>
+</main>
