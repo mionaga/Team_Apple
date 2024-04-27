@@ -7,7 +7,7 @@
             <a href="/travels/new">新規投稿</a>
         </div>
         <ul class="blog-list">
-            <% travels.sort().forEach((travel) => { %>
+            <% travels.reverse().forEach((travel) => { %>
                 <li>
                     <a href="travels/<%= travel._id %>"><%= travel.title %></a>
                 </li>

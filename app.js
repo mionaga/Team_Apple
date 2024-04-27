@@ -36,10 +36,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 
 app.get('/', (req, res) => {
-    // let responseText = 'Welcome To The Travel Blogs!<br>'
-    // responseText += '<small>Requested at: ' + req.requestTime + '</small>'
-    // res.render(responseText);
-    res.send('<h1>Home</h1>')
+    let responseText = 'Welcome To The Travel Blogs!<br>'
+    responseText += '<small>Requested at: ' + req.requestTime + '</small>'
+    res.send(responseText);
+    // res.send('<h1>Home</h1>')
 });
 
 app.get('/travels', async(req, res) => {
@@ -81,5 +81,5 @@ app.delete('/travels/:id', async(req, res) => {
 })
 
 app.listen(3000, () => {
-    console.log('ポート3000でリクエスト待受中...')
+    console.log('ポート5000でリクエスト待受中...')
 });
